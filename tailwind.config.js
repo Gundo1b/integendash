@@ -2,7 +2,17 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'gradient-shift': 'gradientShift 2s ease infinite',
+      },
+      keyframes: {
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+    },
   },
   plugins: [],
 };
